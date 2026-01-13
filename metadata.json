@@ -1,0 +1,7 @@
+{
+  "name": "Revisor AeC - Imagens e PDFs",
+  "description": "Ferramenta profissional para correção gramatical em imagens e documentos PDF utilizando IA AeC.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
