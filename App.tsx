@@ -21,7 +21,7 @@ const App: React.FC = () => {
     reader.onload = async (e) => {
       const base64 = e.target?.result as string;
       const mimeType = file.type;
-      
+
       setCurrentFile({ file, preview: base64, mimeType });
 
       try {
@@ -53,6 +53,13 @@ const App: React.FC = () => {
       <div className="space-y-12">
         {!analysisResult && !isAnalyzing && !error && (
           <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="flex justify-center mb-6">
+              <img
+                src="/logo-3d.png"
+                alt="Revisor AeC Logo 3D"
+                className="w-48 md:w-64 h-auto animate-[bounce_3s_infinite] drop-shadow-2xl hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
+              />
+            </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
               A perfeição do seu texto, <br />
               <span className="text-gradient">direto da imagem ou PDF.</span>
@@ -113,10 +120,10 @@ const App: React.FC = () => {
                   <span>Nova Análise</span>
                 </button>
               </div>
-              
-              <AnalysisResult 
-                data={analysisResult} 
-                filePreview={currentFile?.preview || ''} 
+
+              <AnalysisResult
+                data={analysisResult}
+                filePreview={currentFile?.preview || ''}
                 mimeType={currentFile?.mimeType || ''}
                 fileName={currentFile?.file.name || ''}
               />
