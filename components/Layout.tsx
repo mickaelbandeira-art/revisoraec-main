@@ -20,13 +20,10 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               Revisor <span className="text-cobalto">AeC</span>
             </h1>
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <a href="#" className="text-sm font-medium text-slate-600 hover:text-cobalto transition-colors">Início</a>
-            <a href="#" className="text-sm font-medium text-slate-600 hover:text-cobalto transition-colors">Sobre</a>
-          </nav>
+
         </div>
       </header>
-      
+
       <main className="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {children}
       </main>
